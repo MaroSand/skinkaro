@@ -1,4 +1,6 @@
 <?php 
+require_once "../config/auth.php";
+requerirPermiso('almacen');
 require_once "../modelos/Articulo.php";
  
 $articulo=new Articulo();

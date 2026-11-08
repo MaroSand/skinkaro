@@ -1,4 +1,6 @@
 <?php 
+require_once "../config/auth.php";
+requerirPermiso('compras');
 if (strlen(session_id()) < 1) 
   session_start();
  

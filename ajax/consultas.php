@@ -1,4 +1,6 @@
 <?php 
+require_once "../config/auth.php";
+requerirPermiso(isset($_GET['op']) && $_GET['op'] === 'comprasfecha' ? 'consultac' : 'consultav');
 require_once "../modelos/Consultas.php";
 
 $consulta=new Consultas();

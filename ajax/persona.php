@@ -1,4 +1,6 @@
 <?php 
+require_once "../config/auth.php";
+requerirPermiso('compras', 'ventas'); // proveedores (compras) y clientes (ventas)
 require_once "../modelos/Persona.php";
  
 $persona=new Persona();

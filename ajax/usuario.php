@@ -1,5 +1,10 @@
 <?php 
 session_start();
+require_once "../config/auth.php";
+// Solo el login y el logout son públicos; el resto requiere el permiso "acceso"
+if (!in_array(isset($_GET["op"]) ? $_GET["op"] : "", array("verificar", "salir"))) {
+    requerirPermiso('acceso');
+}
 require_once "../modelos/Usuario.php";
  
 $usuario=new Usuario();

@@ -21,5 +21,11 @@
     <script src="../public/js/bootbox.min.js"></script>
 
     <script src="../public/js/bootstrap-select.min.js"></script>
+    <script>
+      // Si la sesión expiró (401), volver al login
+      $(document).ajaxError(function (event, xhr) {
+        if (xhr.status === 401) { window.location.href = "login.html"; }
+      });
+    </script>
   </body>
 </html>
