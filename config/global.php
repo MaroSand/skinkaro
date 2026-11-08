@@ -1,29 +1,19 @@
-<?php 
-//IP de la PC servidor de BD
-//define("DB_HOST","localhost");
-define("DB_HOST","sql205.infinityfree.com");
+<?php
+// Configuración general. NO escribir credenciales acá.
+// Los datos reales van en config/global.local.php (ignorado por git).
+// Copiar config/global.local.example.php a config/global.local.php y completarlo.
 
-//nombre de la BD
-//define("DB_NAME","dbventas");
-define("DB_NAME","if0_43166187_dbventas");
+$archivoLocal = __DIR__ . '/global.local.php';
 
-//usuario de la BD
-//define("DB_USERNAME","root");
-define("DB_USERNAME","if0_43166187");
+if (!file_exists($archivoLocal)) {
+	http_response_code(500);
+	error_log('Falta config/global.local.php (copiar global.local.example.php y completar).');
+	exit('Error de configuración del servidor.');
+}
 
-// Puerto de la BD
-//define("DB_PORT", "3307");
-define("DB_PORT", "3306");
+require_once $archivoLocal;
 
-//contraseña del usuario de  la BD
-//define("DB_PASSWORD","");
-define("DB_PASSWORD","SkKxBuSoJeqitzW");
-
-//definimos la codificación de los caracteres
-//define("DB_ENCODE","utf8");
-define("DB_ENCODE","utf8");
-
-//definimos el nombre del sistema
-//define("PRO_NOMBRE","ITVentas");
-define("PRO_NOMBRE","ITVentas");
-?>
+// Valores comunes (no sensibles) con valor por defecto
+if (!defined('DB_PORT'))    define('DB_PORT', 3306);
+if (!defined('DB_ENCODE'))  define('DB_ENCODE', 'utf8mb4');
+if (!defined('PRO_NOMBRE')) define('PRO_NOMBRE', 'SkinKaro');

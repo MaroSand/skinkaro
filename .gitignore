@@ -1,0 +1,21 @@
+# Credenciales y configuración local
+config/global.local.php
+*.env
+
+# Comprimidos y copias de respaldo
+*.zip
+*.rar
+*.bak
+*.sql.gz
+
+# Archivos subidos por los usuarios (se crean en cada entorno)
+files/articulos/*
+files/usuarios/*
+!files/articulos/.gitkeep
+!files/usuarios/.gitkeep
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
