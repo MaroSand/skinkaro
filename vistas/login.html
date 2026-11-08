@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ADVentas | www.itventassp.com</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../public/css/font-awesome.css">
+   
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../public/css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="../public/css/blue.css">
+
+    <!-- Fondo con guitarras y estilo del recuadro de acceso -->
+    <style>
+      body.login-page {
+        min-height: 100vh;
+        background: #14100d url("../public/img/fondo-login.jpg") center center / cover no-repeat fixed;
+        position: relative;
+      }
+      /* Velo oscuro sobre la imagen para que el formulario se lea bien */
+      body.login-page::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background: radial-gradient(ellipse at center, rgba(10, 8, 6, .35) 0%, rgba(10, 8, 6, .75) 100%);
+        z-index: 0;
+      }
+      .login-box {
+        position: relative;
+        z-index: 1;
+        margin: 0 auto;
+        padding-top: 9vh;
+      }
+      .login-logo a {
+        color: #fff;
+        text-shadow: 0 2px 12px rgba(0, 0, 0, .6);
+        letter-spacing: .5px;
+      }
+      .login-logo small {
+        display: block;
+        font-size: 15px;
+        color: #f0b48a;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+      .login-box-body {
+        background: rgba(255, 255, 255, .94);
+        border-radius: 10px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, .55);
+        padding: 28px 26px 22px;
+      }
+      .login-box-msg {
+        font-size: 15px;
+        color: #555;
+      }
+      .login-box-body .form-control {
+        border-radius: 6px;
+        height: 40px;
+      }
+      .login-box-body .form-control:focus {
+        border-color: #d4622a;
+        box-shadow: 0 0 0 2px rgba(212, 98, 42, .18);
+      }
+      .login-box-body .btn-primary {
+        background: #d4622a;
+        border-color: #b44f1d;
+        border-radius: 6px;
+        height: 40px;
+        font-weight: 600;
+      }
+      .login-box-body .btn-primary:hover,
+      .login-box-body .btn-primary:focus {
+        background: #b44f1d;
+        border-color: #9a4218;
+      }
+      .login-box-body a {
+        color: #b44f1d;
+      }
+      @media (max-width: 767px) {
+        .login-box {
+          width: 90%;
+          padding-top: 6vh;
+        }
+        /* En celulares "fixed" se ve mal en algunos navegadores */
+        /* y corremos la imagen para que se vean las guitarras de la izquierda */
+        body.login-page {
+          background-attachment: scroll;
+          background-position: 24% center;
+        }
+      }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="hold-transition login-page">
+    <div class="login-box">
+      <div class="login-logo">
+        <a href="#"><b>ADVentas</b><small>Instrumentos musicales</small></a>
+      </div><!-- /.login-logo -->
+      <div class="login-box-body">
+        <p class="login-box-msg">Ingrese sus datos de Acceso</p>
+        <form method="post" id="frmAcceso">
+          <div class="form-group has-feedback">
+            <input type="text" id="logina" name="logina" class="form-control" placeholder="Usuario">
+            <span class="fa fa-user form-control-feedback"></span>
+          </div>
+          <div class="form-group has-feedback">
+            <input type="password" id="clavea" name="clavea" class="form-control" placeholder="Password">
+            <span class="fa fa-key form-control-feedback"></span>
+          </div>
+          <div class="row">
+            <div class="col-xs-8">
+             </div><!-- /.col -->
+            <div class="col-xs-4">
+              <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
+            </div><!-- /.col -->
+          </div>
+        </form>
+
+        
+        <a href="#">Olvidé mi password</a><br>
+        
+
+      </div><!-- /.login-box-body -->
+    </div><!-- /.login-box -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="../public/js/jquery-3.1.1.min.js"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="../public/js/bootstrap.min.js"></script>
+      <!-- Bootbox -->
+    <script src="../public/js/bootbox.min.js"></script>
+    <script type="text/javascript" src="scripts/login.js"></script>
+   
+   
+  </body>
+</html>
